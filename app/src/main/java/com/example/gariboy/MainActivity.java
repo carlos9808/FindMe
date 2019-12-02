@@ -19,20 +19,21 @@ public class MainActivity extends AppCompatActivity {
 
         messages =findViewById(R.id.main_text_messagees);
 
-        
+
         Cursor cursor = getContentResolver().query(Uri.parse("content://sms/inbox"), null, null, null, null);
         String msgData = "";
         if (cursor.moveToFirst()) { // must check the result to prevent exception
             do {
-
-
-                    msgData += cursor.getString(cursor.getColumnIndexOrThrow("body"))+ " Numero:" + cursor.getString(cursor.getColumnIndexOrThrow("address"));
-
+                String phoneNumber =cursor.getString(cursor.getColumnIndexOrThrow("address"));
+                    if(phoneNumber.equals("+528126342995")) {
+                        msgData += cursor.getString(cursor.getColumnIndexOrThrow("body")) + " Numero:" + cursor.getString(cursor.getColumnIndexOrThrow("address"));
+                    }
                 // use msgData
             } while (cursor.moveToNext());
         } else {
             // empty box, no SMS
         }
+
 
         if(!msgData.isEmpty())
         {
