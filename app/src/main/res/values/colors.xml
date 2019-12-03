@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="verde">#C8E9CC</color>
+    <color name="rojo">#FFC1BB</color>
+    <color name="white">#FAFAFA</color>
+    <color name="verdeoscuro">#6BB76D</color>
 </resources>
