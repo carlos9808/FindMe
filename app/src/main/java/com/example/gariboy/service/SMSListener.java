@@ -1,4 +1,4 @@
-package com.example.gariboy;
+package com.example.gariboy.service;
 
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
