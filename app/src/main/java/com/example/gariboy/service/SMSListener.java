@@ -62,7 +62,7 @@ public class SMSListener extends BroadcastReceiver {
                                 .getPackageManager()
                                 .getLaunchIntentForPackage(context.getPackageName());
 
-
+                        startIntent.putExtra("state","1");
                         startIntent.setFlags(
                                 Intent.FLAG_ACTIVITY_REORDER_TO_FRONT |
                                         Intent.FLAG_ACTIVITY_NEW_TASK |
